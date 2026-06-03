@@ -1,0 +1,92 @@
+/* src/Navbar.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #0d0d1a 0%, #1a1a3e 100%);
+  padding: 0 2rem;
+  height: 66px;
+  box-shadow: 0 2px 20px rgba(0, 195, 255, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 195, 255, 0.18);
+}
+
+/* Brand */
+.navbar-brand a {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+}
+
+.brand-ez    { color: #00c3ff; font-weight: 900; }
+.brand-tech  { color: #ffffff; font-weight: 700; }
+.brand-movie { color: #ff6b35; font-weight: 700; }
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 0.45rem 1rem;
+  text-decoration: none;
+  color: #a0aec0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #00c3ff;
+  background: rgba(0, 195, 255, 0.1);
+}
+
+/* Cart badge */
+.cart-link-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cart-badge {
+  background: #ff6b35;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  animation: badgePop 0.25s ease;
+}
+
+@keyframes badgePop {
+  0%   { transform: scale(0.4); }
+  70%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive: collapse to icon-only on very small screens */
+@media (max-width: 600px) {
+  .navbar { padding: 0 1rem; }
+  .nav-links li a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
+  .navbar-brand a { font-size: 1.1rem; }
+}

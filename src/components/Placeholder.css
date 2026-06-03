@@ -1,0 +1,22 @@
+/* src/components/Placeholder.css */
+
+.placeholder-page {
+  padding: 4rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.placeholder-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.placeholder-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem;
+  color: #718096;
+  line-height: 1.6;
+}

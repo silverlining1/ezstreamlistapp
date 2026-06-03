@@ -1,0 +1,131 @@
+/* src/components/Featured.css */
+
+.featured-page {
+  padding: 2.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem 3rem;
+}
+
+.hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-accent { color: #00c3ff; }
+.accent      { color: #00c3ff; }
+
+.hero-sub {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.1rem;
+  color: #a0aec0;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.72rem 1.8rem;
+  border-radius: 9px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00c3ff, #0077aa);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(0, 195, 255, 0.4);
+  color: #00c3ff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Featured section */
+.featured-section { margin-top: 1rem; }
+
+.section-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.45rem;
+  color: #fff;
+  margin-bottom: 1.4rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+.card {
+  background: linear-gradient(160deg, #1a1a3e 0%, #12122a 100%);
+  border: 1px solid rgba(0, 195, 255, 0.14);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 195, 255, 0.38);
+}
+
+.card-placeholder {
+  height: 160px;
+  background: linear-gradient(135deg, #1e1e4a, #2a1a2e);
+}
+
+.card-info { padding: 1rem 1.1rem 1.25rem; }
+
+.card-genre {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #00c3ff;
+  margin: 0 0 0.25rem;
+}
+
+.card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.88rem;
+  color: #e2e8f0;
+  margin: 0 0 0.35rem;
+}
+
+.card-rating {
+  font-size: 0.85rem;
+  color: #f6c90e;
+  margin: 0;
+}
