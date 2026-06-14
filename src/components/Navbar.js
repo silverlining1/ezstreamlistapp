@@ -48,23 +48,24 @@ function Navbar() {
             </Link>
           </li>
         ))}
-      </ul>
 
-      {/* Signed-in user: avatar + sign out. Logging out clears the
-          session, which sends the user back to /login via ProtectedRoute. */}
-      {user && (
-        <div className="navbar-user">
-          <img
-            className="user-avatar"
-            src={user.picture}
-            alt={user.name}
-            referrerPolicy="no-referrer"
-          />
-          <button className="logout-btn" onClick={logout}>
-            Sign out
-          </button>
-        </div>
-      )}
+        {/* Signed-in user lives inside the list so it aligns with the
+            other nav items. Logging out clears the session, which sends
+            the user back to /login via ProtectedRoute. */}
+        {user && (
+          <li className="navbar-user">
+            <img
+              className="user-avatar"
+              src={user.picture}
+              alt={user.name}
+              referrerPolicy="no-referrer"
+            />
+            <button className="logout-btn" onClick={logout}>
+              Sign out
+            </button>
+          </li>
+        )}
+      </ul>
     </nav>
   );
 }

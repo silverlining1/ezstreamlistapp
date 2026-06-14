@@ -84,9 +84,49 @@
   100% { transform: scale(1); }
 }
 
+/* Signed-in user: avatar + sign out */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 0.6rem;
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00c3ff;
+  display: block;
+  flex-shrink: 0;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #ff6b35;
+  color: #ff6b35;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+  background: #ff6b35;
+  color: #0d0d1a;
+}
+
 /* Responsive: collapse to icon-only on very small screens */
 @media (max-width: 600px) {
   .navbar { padding: 0 1rem; }
   .nav-links li a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
   .navbar-brand a { font-size: 1.1rem; }
+  .user-avatar { width: 28px; height: 28px; }
+  .logout-btn { padding: 0.3rem 0.6rem; font-size: 0.65rem; }
 }

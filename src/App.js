@@ -30,7 +30,7 @@ function AppLayout() {
         </Routes>
       </main>
       <footer className="app-footer">
-        <p>© 2026 EZTechMovie &mdash; StreamList | INT499 Capstone Project</p>
+        <p>© 2026 EZTechMovie &mdash; StreamList</p>
       </footer>
     </div>
   );
