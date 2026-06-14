@@ -2,10 +2,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../CartContext';
+import { useAuth } from '../AuthContext';
 import '../Navbar.css';
 
 function Navbar() {
   const { totalItems } = useCart();
+  const { user, logout } = useAuth();
   const location = useLocation();
 
   const links = [
@@ -47,6 +49,22 @@ function Navbar() {
           </li>
         ))}
       </ul>
+
+      {/* Signed-in user: avatar + sign out. Logging out clears the
+          session, which sends the user back to /login via ProtectedRoute. */}
+      {user && (
+        <div className="navbar-user">
+          <img
+            className="user-avatar"
+            src={user.picture}
+            alt={user.name}
+            referrerPolicy="no-referrer"
+          />
+          <button className="logout-btn" onClick={logout}>
+            Sign out
+          </button>
+        </div>
+      )}
     </nav>
   );
 }

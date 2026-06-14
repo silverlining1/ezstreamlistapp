@@ -1,0 +1,129 @@
+/* src/components/CreditCard.css */
+.payment-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Live card preview */
+.card-preview {
+  width: 340px;
+  height: 200px;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #0c3b5c 0%, #00c3ff 120%);
+  box-shadow: 0 10px 30px rgba(0, 195, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Rajdhani", sans-serif;
+  color: #ffffff;
+}
+
+.card-chip {
+  width: 48px;
+  height: 36px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f4d36b, #c9a227);
+}
+
+.card-number-preview {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 2px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.payment-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.payment-heading {
+  font-family: "Orbitron", sans-serif;
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-label {
+  display: block;
+  font-family: "Rajdhani", sans-serif;
+  color: #a0aec0;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.payment-input {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 195, 255, 0.3);
+  background: #0f1b2a;
+  color: #ffffff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.payment-input:focus {
+  border-color: #00c3ff;
+  box-shadow: 0 0 0 2px rgba(0, 195, 255, 0.2);
+}
+
+.payment-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.payment-total {
+  font-family: "Orbitron", sans-serif;
+  color: #00c3ff;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  background: #00c3ff;
+  color: #0a1018;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pay-btn:hover {
+  background: #33d1ff;
+}
+
+/* Confirmation */
+.payment-confirm {
+  text-align: center;
+  padding: 2rem;
+}
+
+.confirm-text {
+  font-family: "Rajdhani", sans-serif;
+  color: #a0aec0;
+  margin: 1rem 0 1.5rem;
+}

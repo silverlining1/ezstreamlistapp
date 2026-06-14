@@ -1,0 +1,57 @@
+/* src/components/Login.css */
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 30%, #142235 0%, #0a1018 70%);
+  padding: 2rem;
+}
+
+.login-card {
+  background: rgba(18, 28, 42, 0.92);
+  border: 1px solid rgba(0, 195, 255, 0.25);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 195, 255, 0.15);
+  max-width: 420px;
+  width: 100%;
+}
+
+.login-brand {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.brand-ez {
+  color: #00c3ff;
+}
+.brand-tech {
+  color: #ffffff;
+}
+.brand-movie {
+  color: #00c3ff;
+}
+
+.login-tagline {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.15rem;
+  color: #a0aec0;
+  margin-bottom: 2rem;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.login-note {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.85rem;
+  color: #6b7a8d;
+  line-height: 1.5;
+}

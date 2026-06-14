@@ -1,6 +1,6 @@
 // src/components/Cart.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext';
 import './Cart.css';
 
@@ -13,6 +13,8 @@ function Cart() {
     totalPrice,
     totalItems,
   } = useCart();
+
+  const navigate = useNavigate();
 
   /* ── Empty state ── */
   if (cartItems.length === 0) {
@@ -123,7 +125,12 @@ function Cart() {
             <span className="summary-total-price">${totalPrice.toFixed(2)}</span>
           </div>
 
-          <button className="checkout-btn">Proceed to Checkout</button>
+          <button
+            className="checkout-btn"
+            onClick={() => navigate('/checkout')}
+          >
+            Proceed to Checkout
+          </button>
           <Link to="/subscriptions" className="continue-link">
             ← Continue Shopping
           </Link>
