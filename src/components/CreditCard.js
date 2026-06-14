@@ -92,7 +92,7 @@ export default function CreditCard() {
             className="payment-input"
             value={cardName}
             onChange={(e) => setCardName(e.target.value)}
-            placeholder="Card Holder Name"
+            placeholder="Cardholder Name"
           />
         </label>
 
