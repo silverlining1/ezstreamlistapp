@@ -1,0 +1,222 @@
+/* src/components/Watchlist.css */
+
+/* Shared layout classes — same values as Search.css so either component works standalone */
+.page-container {
+  padding: 2.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.page-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  color: #718096;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Input row */
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.text-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 195, 255, 0.2);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.text-input::placeholder { color: #4a5568; }
+.text-input:focus { border-color: rgba(0, 195, 255, 0.5); }
+
+/* Add button */
+.watchlist-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #00c3ff, #0077aa);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.watchlist-add-btn:hover:not(:disabled) { opacity: 0.86; transform: scale(1.02); }
+.watchlist-add-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.watchlist-add-btn-icon { font-size: 1.1rem; }
+
+/* Empty state */
+.empty-state {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  color: #718096;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* Watchlist */
+.stream-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.list-item {
+  background: linear-gradient(160deg, #1a1a3e 0%, #12122a 100%);
+  border: 1px solid rgba(0, 195, 255, 0.14);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.list-item:hover { border-color: rgba(0, 195, 255, 0.32); }
+
+.list-item-completed {
+  opacity: 0.55;
+  border-color: rgba(0, 195, 255, 0.08);
+}
+
+.list-item-completed .item-text {
+  text-decoration: line-through;
+  color: #718096;
+}
+
+.item-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.68rem;
+  color: #4a5568;
+  min-width: 1.4rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.item-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  color: #e2e8f0;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.edit-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 195, 255, 0.4);
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  padding: 0.35rem 0.6rem;
+  outline: none;
+}
+
+/* Icon buttons */
+.item-actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #4a5568;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.icon-btn .material-icons { font-size: 1.1rem; }
+
+.icon-btn-complete:hover {
+  color: #00c3ff;
+  border-color: rgba(0, 195, 255, 0.3);
+}
+
+.icon-btn-edit:hover {
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-btn-delete:hover {
+  color: #ff6b35;
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.icon-btn-save:hover {
+  color: #00cc88;
+  border-color: rgba(0, 204, 136, 0.3);
+}
+
+.icon-btn-cancel:hover {
+  color: #ff6b35;
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+/* Console box */
+.console-box {
+  background: #0a0a18;
+  border: 1px solid rgba(0, 195, 255, 0.18);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.console-header {
+  background: rgba(0, 195, 255, 0.07);
+  border-bottom: 1px solid rgba(0, 195, 255, 0.14);
+  color: #4a5568;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+}
+
+.console-body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  color: #00c3ff;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 5rem;
+}

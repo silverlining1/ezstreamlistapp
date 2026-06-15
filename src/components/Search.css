@@ -1,0 +1,239 @@
+/* src/components/Search.css */
+
+.page-container {
+  padding: 2.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.page-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  color: #718096;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Search bar row */
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.text-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 195, 255, 0.2);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.text-input::placeholder {
+  color: #4a5568;
+}
+
+.text-input:focus {
+  border-color: rgba(0, 195, 255, 0.5);
+}
+
+/* Search button */
+.search-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #00c3ff, #0077aa);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.search-add-btn:hover:not(:disabled) {
+  opacity: 0.86;
+  transform: scale(1.02);
+}
+
+.search-add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.search-add-btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Clear button */
+.search-icon-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #718096;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.search-icon-btn:hover {
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Error message */
+.movies-error {
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.38);
+  border-radius: 8px;
+  color: #ff6b35;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Empty / loading state */
+.empty-state {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  color: #718096;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* Movie grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.movie-card {
+  background: linear-gradient(160deg, #1a1a3e 0%, #12122a 100%);
+  border: 1px solid rgba(0, 195, 255, 0.14);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 195, 255, 0.42);
+  box-shadow: 0 8px 28px rgba(0, 195, 255, 0.1);
+}
+
+.movie-poster-wrap {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-poster-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a5568;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-poster-placeholder .material-icons {
+  font-size: 3rem;
+}
+
+.movie-rating {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(8, 8, 24, 0.82);
+  border-radius: 6px;
+  color: #fbbf24;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.2rem 0.4rem;
+}
+
+.movie-rating-icon {
+  font-size: 0.9rem;
+}
+
+.movie-card-body {
+  padding: 0.85rem 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.movie-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  color: #e2e8f0;
+  margin: 0 0 0.25rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movie-meta {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.82rem;
+  color: #718096;
+  margin: 0 0 0.45rem;
+}
+
+.movie-overview {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* TMDB attribution */
+.tmdb-attribution {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.78rem;
+  color: #4a5568;
+  text-align: center;
+  margin-top: 2rem;
+}
